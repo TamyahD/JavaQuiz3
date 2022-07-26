@@ -18,7 +18,7 @@ public class TicTacToe {
     }
 
     public String[] getRow(Integer value) {
-        return null;
+        return board[value];
     }
 
     public String[] getColumn(Integer value) {
