@@ -13,20 +13,20 @@ public class VowelUtils {
     }
 
     public static Integer getIndexOfFirstVowel(String word) {
-//        String[] vowels = new String[] { "A", "a", "E", "e", "I", "i", "O",
-//                "o", "U", "u" };
-//        List<String> vowelList = new ArrayList<String>(Arrays.asList(vowels));
-//        for (int i = 0; i < word.length(); i++) {
-//            if(vowelList.contains(word.charAt(i))){
-//                return i;
-//            }
-//        }
-        return null;
+        String vowels = "aeiouAEIOU";
+        String lowerCase = word.toLowerCase();
+
+        for (int index = 0; index < lowerCase.length(); index++) {
+            if (vowels.contains(String.valueOf(lowerCase.charAt(index)))) {
+                return index;
+            }
+        }
+        return -1;
     }
 
 
     public static Boolean startsWithVowel(String word) {
-        String[] VOWELS ={"a","e","i","o","u"};
+        String[] VOWELS = {"a", "e", "i", "o", "u"};
         for (String vowel : VOWELS) {
             if (word.toLowerCase().startsWith(vowel.toLowerCase()))
                 return true;
