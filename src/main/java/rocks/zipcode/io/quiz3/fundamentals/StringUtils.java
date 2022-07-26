@@ -9,8 +9,18 @@ import java.util.List;
  */
 public class StringUtils {
     public static String capitalizeNthCharacter(String str, Integer indexToCapitalize) {
-//        String newString = StringUtils.capitalizeNthCharacter(str, indexToCapitalize);
-        return StringUtils.capitalizeNthCharacter(str, indexToCapitalize);
+        if (indexToCapitalize < 0) {
+            throw new IndexOutOfBoundsException("Negative index not allowed: " + indexToCapitalize);
+        }
+        if (str == null || str.length() <= indexToCapitalize) {
+            return str;
+        }
+        if (Character.isUpperCase(str.charAt(indexToCapitalize))) {
+            return str;
+        }
+        char[] charArray = str.toCharArray();
+        charArray[indexToCapitalize] = Character.toUpperCase(charArray[indexToCapitalize]);
+        return new String(charArray);
     }
 
     public static Boolean isCharacterAtIndex(String baseString, Character characterToCheckFor, Integer indexOfString) {

@@ -22,7 +22,7 @@ public class TicTacToe {
     }
 
     public String[] getColumn(Integer value) {
-        return null;
+        return board[value];
     }
 
     public Boolean isRowHomogenous(Integer rowIndex) {
