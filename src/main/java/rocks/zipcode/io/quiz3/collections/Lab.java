@@ -6,10 +6,6 @@ package rocks.zipcode.io.quiz3.collections;
 public class Lab {
     private LabStatus labStatus;
     public Lab() {
-        for (Enum e: labStatus) {
-            this(null);
-
-        }
     }
 
     public Lab(String labName) {
@@ -21,7 +17,7 @@ public class Lab {
 
     public void setStatus(LabStatus labStatus) {
         this.labStatus = labStatus;
-        labStatus == L
+
     }
 
     public LabStatus getStatus() {
