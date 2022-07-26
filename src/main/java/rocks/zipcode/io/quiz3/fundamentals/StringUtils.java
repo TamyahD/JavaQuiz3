@@ -1,6 +1,7 @@
 package rocks.zipcode.io.quiz3.fundamentals;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -12,7 +13,10 @@ public class StringUtils {
     }
 
     public static Boolean isCharacterAtIndex(String baseString, Character characterToCheckFor, Integer indexOfString) {
-        return null;
+        if(baseString.charAt(indexOfString) == characterToCheckFor){
+            return true;
+        }
+        return false;
     }
 
     public static String[] getAllSubStrings(String string) {
